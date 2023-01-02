@@ -1,0 +1,13 @@
+<header>
+    <h1>{{isLoggedIn ? profileTitle : loginTitle}}</h1>
+</header>
+
+<div *ngIf = "!isLoggedIn">
+    <app-login (btnRegisterClick) = "toggleLogin()"
+    (onLogin) = "onLogin($event)" ></app-login>
+
+    <app-register (btnBackClick) = "toggleLogin()"
+    (onAddAccount) = "addAccount($event)" ></app-register>
+
+    <app-waiting></app-waiting>
+</div>

@@ -1,0 +1,30 @@
+<form *ngIf = "!showLogin && !isWaiting">
+    <div class = "container">
+        <label>Username: </label>
+        <input field = "textbox" 
+        name = "user" [(ngModel)] = "user"
+        id = "user" 
+        placeholder = "Username" />
+
+        <label>Password: </label>
+        <input field = "textbox" 
+        name = "pass" [(ngModel)] = "pass"
+        id = "pass" 
+        type = "password"
+        placeholder = "Password" />
+
+        <label>Confirm: </label>
+        <input field = "textbox" 
+        name = "confirm" [(ngModel)] = "confirm"
+        id = "confirm" 
+        type = "password"
+        placeholder = "Confirm Password" />
+
+        <br>
+
+        <input type = "submit" value = "Register" class = "btn" 
+        (click) = "onRegisterClick()" />
+        <input type = "submit" value = "Back" class = "btn traverse"
+        (click) = "onLoginClick()" />
+    </div>
+</form>
