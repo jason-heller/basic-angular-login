@@ -101,7 +101,6 @@ export class AccountComponent {
   }
 
   onLogout() {
-    alert("You have been logged out.")
     this.uiService.toggleLogInState();
     this.changePass = false;
   }
