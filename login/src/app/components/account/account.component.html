@@ -1,9 +1,41 @@
 <div *ngIf = "isLoggedIn">
 
-    <div class = "container">
+    <app-waiting></app-waiting>
+    <div class = "container" *ngIf = "!isWaiting">
         <p>Welcome to your amazing account! Look at all the things to do:</p>
 
-        <input type = "submit" value = "Delete Account" class = "btn"
-         (click) = "onDeleteAccount()"/>
+        <input type = "submit" 
+        value = "Change Password" 
+        class = "btn" 
+        *ngIf = "!changePass"
+        (click) = "changePass = true"/>
+
+        <form *ngIf = "changePass" class = "bordered">
+            <label>New Password: </label>
+            <input field = "textbox" 
+            name = "pass" [(ngModel)] = "pass"
+            id = "pass" 
+            type = "password"
+            placeholder = "Password" />
+
+            <label>Confirm: </label>
+            <input field = "textbox" 
+            name = "confirm" [(ngModel)] = "confirm"
+            id = "confirm" 
+            type = "password"
+            placeholder = "Confirm New Password" />
+            <input type = "submit" value = "Change Password" class = "btn" 
+            (click) = "onUpdateClick()" />
+        </form>
+
+        <br>
+
+        <input type = "submit" value = "Logout" class = "btn"
+        (click) = "onLogout()"/>
+        
+        <br><br>
+
+        <input type = "submit" value = "Delete Account" class = "btn delete"
+        (click) = "onDeleteAccount()"/>
     </div>
 </div>

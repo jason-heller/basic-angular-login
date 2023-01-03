@@ -86,6 +86,7 @@ export class HeaderComponent implements OnInit {
     }
     
     this.uiService.toggleLogInState();
+    this.uiService.toggleWaiting();
     this.uiService.setUsername(target.username);
   }
 }

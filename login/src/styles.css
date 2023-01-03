@@ -37,12 +37,26 @@ body {
   color: #7eacb9;
 }
 
+.delete {
+  background: rgb(200, 0, 0);
+  color: #000
+}
+
 .btn.focus {
   outline: none;
 }
 
 .btn:active {
   transform: scale(0.95);
+}
+
+.bordered {
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #95ddce;
+  padding: 20px;
+  margin: auto;
 }
 
 input {
@@ -52,4 +66,5 @@ input {
 label {
   display: block;
   width: 130px;
+  color: #000;
 }
