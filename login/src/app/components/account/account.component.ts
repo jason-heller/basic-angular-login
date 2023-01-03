@@ -64,6 +64,9 @@ export class AccountComponent {
 
     if (this.pass !== this.confirm) {
       alert("Passwords don't match.");
+        
+      this.pass = '';
+      this.confirm = '';
       return;
     }
 
@@ -103,5 +106,9 @@ export class AccountComponent {
   onLogout() {
     this.uiService.toggleLogInState();
     this.changePass = false;
+  }
+
+  getUsername(): string {
+    return this.uiService.getUsername();
   }
 }

@@ -2,7 +2,7 @@
 
     <app-waiting></app-waiting>
     <div class = "container" *ngIf = "!isWaiting">
-        <p>Welcome to your amazing account! Look at all the things to do:</p>
+        <p>Welcome to your account, {{getUsername()}}! Look at all the things to do:</p>
 
         <input type = "submit" 
         value = "Change Password" 
